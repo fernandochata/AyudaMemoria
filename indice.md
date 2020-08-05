@@ -522,7 +522,15 @@ repeatStr.match(repeatRegex); // Returns ["regex regex", "regex"]
 
 ```
 ```javascript
-
+if ('geolocation' in navigator) {
+    navigator.geolocation.getCurrentPosition(position => {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+        console.log(position);
+    })
+} else {
+    console.log('geolocation not available');
+}
 ```      
       
       // ayuda memoria ARRAYs JS
